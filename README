@@ -1,0 +1,54 @@
+************************************************************************
+Dimitar Dimitrov                                                 0922289
+CIS4500                                                               A1
+October 6, 2019
+************************************************************************
+
+This assignment uses data preprocessing techniques such as sentence 
+splitting, string tokenizing, and part-of-speech tagging to make article 
+data easier to analyze.
+
+Compilation
+-----------
+    - Compile in root directory with "make". This will generate all java
+      .class files necessary to run the programs.
+
+    - Make sure "article.flex", "opennlp-tools-1.9.1.jar", and the
+      directory "OpenNLP_models" are all present in the root directory 
+      aside from the .java files present. They are needed at 
+      compile and run time.
+
+Usage
+-----
+    - Run each program individually or together through piping. All
+      programs read from STDIN and write to STDOUT.
+    
+    - Program 1: java -cp opennlp-tools-1.9.1.jar:. SentenceSplitter < 
+      {input file}
+    - Program 2: java Scanner < {input file}
+    - Program 3: java -cp opennlp-tools-1.9.1.jar:. POSTagger < 
+      {input file}
+    - Program 4: java TaggedDataAnalyzer < {input file}
+
+    - All together: java -cp opennlp-tools-1.9.1.jar:. 
+      SentenceSplitter < {input file} | java Scanner | java -cp 
+      opennlp-tools-1.9.1.jar:. POSTagger | java TaggedDataAnalyzer
+
+Known Limitations
+-----------------
+    - Programs depend on the $DOC-$TITLE-$TEXT formatting for each document
+      provided as input.
+
+    - No user input validation.
+
+Further Changes
+---------------
+    - If more time was provided I would:
+        - Work on making my programs more robust by handling specific 
+          exceptions and user input errors
+
+        - Work to improve my Scanner program to handle more obscure
+          cases for tokens.
+
+        - Make code more efficient overall and client up the structure
+          by creating smaller methods that perform fewer things.
