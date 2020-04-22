@@ -1,4 +1,4 @@
-# Online Book Catalog
+# Data Preprocessor
 
 Uses data preprocessing techniques such as sentence splitting, string tokenizing, and part-of-speech tagging to make article data easier to analyze.
 
